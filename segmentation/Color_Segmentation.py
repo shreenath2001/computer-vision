@@ -16,7 +16,7 @@ def color_seg(path, lr, ur):
 # path is the path of the image
 # lr and ur are numpy array of lower and upper bound of the color you want to segment
 
-path = "tulips.jpg"
+path = "../img/tulips.jpg"
 lr = np.array([20,100,100]) # lower bound of yellow color
 ur = np.array([30,255,255]) # upper bound of yellow color
 
@@ -29,6 +29,6 @@ plt.imshow(img[:,:,::-1]) # matplotlib has RGB format
 
 plt.subplot(122)
 plt.imshow(res[:,:,::-1])
-plt.imsave(r'segmented_tulips.jpg', res[:,:,::-1])
+plt.imsave(r'../img/segmented_tulips.jpg', res[:,:,::-1])
 
 plt.show()
